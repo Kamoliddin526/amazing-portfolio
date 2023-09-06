@@ -60,21 +60,22 @@ const Project = (props) => {
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
-        <planeGeometry args={[2.2, 2]} />
-        <meshBasicMaterial color="black" transparent opacity={0.4} />
+        <planeGeometry args={[3, 2.3]} />
+        <meshBasicMaterial color="#F5EFE6" transparent opacity={0.4} />
       </mesh>
       <Image
-        scale={[2, 1.2, 1]}
+        scale={[2.9, 1.2, 1]}
         url={project.image}
         toneMapped={false}
-        position-y={0.3}
+        position-y={0.5}
       />
       <Text
         maxWidth={2}
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
-        position={[-1, -0.4, 0]}
+        color={"black"}
+        position={[-1.2, -0.3, 0]}
       >
         {project.title.toUpperCase()}
       </Text>
@@ -83,7 +84,8 @@ const Project = (props) => {
         anchorX="left"
         anchorY="top"
         fontSize={0.1}
-        position={[-1, -0.6, 0]}
+        color={"black"}
+        position={[-1.2, -0.6, 0]}
       >
         {project.description}
       </Text>
