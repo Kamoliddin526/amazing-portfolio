@@ -1,7 +1,8 @@
 import { ValidationError, useForm } from "@formspree/react";
-import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -45,15 +46,32 @@ export const Interface = (props) => {
 
 const AboutSection = (props) => {
   const { setSection } = props;
+
   return (
     <Section mobileTop>
       <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Wawa Sensei</span>
+        <span>
+          <Typewriter
+            words={[
+              "Kuliyev Kamoliddin",
+              "Web Developer",
+              "Editor",
+              "Content Creator",
+              "Car Enthusiast",
+            ]}
+            loop={5}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
       </h1>
       <motion.p
-        className="text-lg text-gray-600 mt-4"
+        className="text-lg text-gray-700 mt-4 w-96"
         initial={{
           opacity: 0,
           y: 25,
@@ -67,13 +85,13 @@ const AboutSection = (props) => {
           delay: 1.5,
         }}
       >
-        I make YouTube videos to help developers
-        <br />
-        learn how to build 3D apps
+        I am an upcoming web developer with
+        <br />  a passion to learn how to build 3D
+        apps <br /> and awesome user experiences.
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
-        className={`bg-indigo-600 text-white py-4 px-8 
+        className={`bg-gray-600 text-white py-4 px-8 
       rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
           opacity: 0,
@@ -96,38 +114,43 @@ const AboutSection = (props) => {
 
 const skills = [
   {
-    title: "Threejs / React Three Fiber",
-    level: 80,
-  },
-  {
-    title: "React / React Native",
-    level: 90,
-  },
-  {
-    title: "Nodejs",
-    level: 90,
-  },
-  {
-    title: "Typescript",
-    level: 60,
-  },
-  {
-    title: "3D Modeling",
-    level: 40,
-  },
-];
-const languages = [
-  {
-    title: "🇫🇷 French",
+    title: "Html",
     level: 100,
   },
   {
-    title: "🇺🇸 English",
+    title: "Css",
+    level: 100,
+  },
+  {
+    title: "Javascript",
     level: 80,
   },
   {
-    title: "🇯🇵 Japanese",
-    level: 20,
+    title: "React",
+    level: 80,
+  },
+  {
+    title: "Threejs",
+    level: 30,
+  },
+  {
+    title: "Typescript",
+    level: 30,
+  },
+ 
+];
+const languages = [
+  {
+    title: "us English",
+    level: 95,
+  },
+  {
+    title: "uz Uzbek",
+    level: 100,
+  },
+  {
+    title: "ru Russian",
+    level: 40,
   },
 ];
 
@@ -278,6 +301,7 @@ const ContactSection = () => {
             <input
               type="text"
               name="name"
+              placeholder="Your name..."
               id="name"
               className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
@@ -290,6 +314,7 @@ const ContactSection = () => {
             <input
               type="email"
               name="email"
+              placeholder="Your email..."
               id="email"
               className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
@@ -308,6 +333,7 @@ const ContactSection = () => {
             <textarea
               name="message"
               id="message"
+              placeholder="Write your message..."
               className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
             <ValidationError
