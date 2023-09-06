@@ -14,7 +14,7 @@ export function Avatar(props) {
     cursorFollow: false,
   });
   const group = useRef();
-  const { nodes, materials } = useGLTF("models/646d9dcdc8a5f5bddbfac913.glb");
+  const { nodes, materials } = useGLTF("models/64f8cfd11184c388271d6afd.glb");
 
   const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
   const { animations: standingAnimation } = useFBX(
@@ -131,7 +131,7 @@ export function Avatar(props) {
   );
 }
 
-useGLTF.preload("models/646d9dcdc8a5f5bddbfac913.glb");
+useGLTF.preload("models/64f8cfd11184c388271d6afd.glb");
 useFBX.preload("animations/Typing.fbx");
 useFBX.preload("animations/Standing Idle.fbx");
 useFBX.preload("animations/Falling Idle.fbx");

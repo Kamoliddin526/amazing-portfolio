@@ -71,7 +71,7 @@ const AboutSection = (props) => {
         </span>
       </h1>
       <motion.p
-        className="text-lg text-gray-700 mt-4 w-96"
+        className="text-lg text-slate-600 mt-4 w-96"
         initial={{
           opacity: 0,
           y: 25,
@@ -91,7 +91,7 @@ const AboutSection = (props) => {
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
-        className={`bg-gray-600 text-white py-4 px-8 
+        className={`bg-slate-800 text-white py-4 px-8 
       rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
           opacity: 0,
