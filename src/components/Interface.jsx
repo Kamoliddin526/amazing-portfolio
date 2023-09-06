@@ -86,8 +86,8 @@ const AboutSection = (props) => {
         }}
       >
         I am an upcoming web developer with
-        <br />  a passion to learn how to build 3D
-        apps <br /> and awesome user experiences.
+        <br /> a passion to learn how to build 3D apps <br /> and awesome user
+        experiences.
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
@@ -137,7 +137,6 @@ const skills = [
     title: "Typescript",
     level: 30,
   },
- 
 ];
 const languages = [
   {
@@ -286,7 +285,7 @@ const ProjectsSection = () => {
 };
 
 const ContactSection = () => {
-  const [state, handleSubmit] = useForm("mayzgjbd");
+  const [state, handleSubmit] = useForm("xyyqjlev");
   return (
     <Section>
       <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
